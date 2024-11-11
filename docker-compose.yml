@@ -1,6 +1,29 @@
-version: '3'
 services:
-  app:
-    image: first-docker-container
+  test:
+    image: nginx:1.20
+    container_name: test
+    restart: unless-stopped
     ports:
-      - "3000:3000"
+      - "8085:80"
+
+  sharp_johnson:
+    image: nginx:1.20
+    container_name: sharp_johnson
+    restart: unless-stopped
+    ports:
+      - "8087:80"
+
+  fervent_borg:
+    image: nginx
+    container_name: fervent_borg
+    restart: unless-stopped
+    ports:
+      - "8089:80"
+
+  pedantic_shockley:
+    image: eedaff45e3c7
+    container_name: pedantic_shockley
+    restart: unless-stopped
+    ports:
+      - "8084:80"
+ 
